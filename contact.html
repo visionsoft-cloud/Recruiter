@@ -61,23 +61,15 @@
       <!-- Contact Form -->
       <div class="bg-gray-50 p-8 rounded-xl shadow">
         <h2 class="text-2xl font-semibold mb-6">Send a Message</h2>
-        <form action="#" method="POST" class="space-y-5">
-          <div>
-            <label class="block mb-2 text-sm font-medium">Full Name</label>
-            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" required>
-          </div>
-          <div>
-            <label class="block mb-2 text-sm font-medium">Email Address</label>
-            <input type="email" placeholder="you@example.com" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" required>
-          </div>
-          <div>
-            <label class="block mb-2 text-sm font-medium">Message</label>
-            <textarea rows="5" placeholder="Write your message..." class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" required></textarea>
-          </div>
-          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg shadow hover:bg-blue-700">
-            Send Message
-          </button>
-        </form>
+              <form action="https://api.web3forms.com/submit" method="post" class="grid gap-6 max-w-xl mx-auto">
+        <input type="hidden" name="access_key" value="09154247-2d26-4776-9bce-6f00cf384928">
+        <input type="text" name="name" placeholder="Your Name" class="p-3 border rounded-lg w-full">
+        <input type="email" placeholder="Your Email" name="email" class="p-3 border rounded-lg w-full">
+        <input type="text" placeholder="Your Phone" name="phone" class="p-3 border rounded-lg w-full">
+      <input type="text" placeholder="Your Address" name="Address" class="p-3 border rounded-lg w-full">
+        <textarea placeholder="Your Message" rows="4" name="message" class="p-3 border rounded-lg w-full"></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Send Message</button>
+      </form>
       </div>
 
       <!-- Contact Info -->

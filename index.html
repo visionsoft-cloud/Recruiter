@@ -147,12 +147,15 @@
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
       <p class="text-gray-600 mb-8">Let's connect and build the future together!</p>
-      <form class="grid gap-6 max-w-xl mx-auto">
-        <input type="text" placeholder="Your Name" class="p-3 border rounded-lg w-full">
-        <input type="email" placeholder="Your Email" class="p-3 border rounded-lg w-full">
-        <textarea placeholder="Your Message" rows="4" class="p-3 border rounded-lg w-full"></textarea>
+            <form action="https://api.web3forms.com/submit" method="post" class="grid gap-6 max-w-xl mx-auto">
+        <input type="hidden" name="access_key" value="09154247-2d26-4776-9bce-6f00cf384928">
+        <input type="text" name="name" placeholder="Your Name" class="p-3 border rounded-lg w-full">
+        <input type="email" placeholder="Your Email" name="email" class="p-3 border rounded-lg w-full">
+        <input type="text" placeholder="Your Phone" name="phone" class="p-3 border rounded-lg w-full">
+      <input type="text" placeholder="Your Address" name="Address" class="p-3 border rounded-lg w-full">
+        <textarea placeholder="Your Message" rows="4" name="message" class="p-3 border rounded-lg w-full"></textarea>
         <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Send Message</button>
-      </form>
+            </form>
     </div>
   </section>
 

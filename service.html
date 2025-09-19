@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | HR Recruiter Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <a href="index.html" class="text-2xl font-bold text-blue-600">Recruiter</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="jobs.html" class="hover:text-blue-600">Jobs</a>
+        <a href="service.html" class="text-blue-600 font-semibold">Services</a>
+        <a href="index.html#experience" class="hover:text-blue-600">Experience</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <!-- Hamburger -->
+      <button class="md:hidden text-gray-600 focus:outline-none" id="menu-btn">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+  <!-- Mobile Navbar (Slide from Right) -->
+  <div id="menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <div class="p-6">
+      <button id="close-btn" class="text-gray-600 text-2xl float-right">&times;</button>
+      <nav class="mt-12 space-y-4">
+        <a href="index.html" class="block text-lg hover:text-blue-600">Home</a>
+        <a href="about.html" class="block text-lg hover:text-blue-600">About</a>
+        <a href="jobs.html" class="block text-lg hover:text-blue-600">Jobs</a>
+        <a href="services.html" class="block text-lg text-blue-600 font-semibold">Services</a>
+        <a href="index.html#experience" class="block text-lg hover:text-blue-600">Experience</a>
+        <a href="index.html#contact" class="block text-lg hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-blue-100">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h1 class="text-4xl font-bold text-gray-800 mb-6">My Services</h1>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+        As a professional HR Recruiter, I offer end-to-end recruitment and hiring solutions to help organizations and job seekers connect effectively.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Service Card -->
+      <div class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-5xl mb-4">👥</div>
+        <h3 class="text-xl font-semibold mb-3">Talent Acquisition</h3>
+        <p class="text-gray-600">
+          Identifying and attracting top talent across industries with personalized hiring strategies.
+        </p>
+      </div>
+
+      <!-- Service Card -->
+      <div class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-5xl mb-4">📝</div>
+        <h3 class="text-xl font-semibold mb-3">Resume Screening</h3>
+        <p class="text-gray-600">
+          Thorough screening of resumes to shortlist candidates best suited for open roles.
+        </p>
+      </div>
+
+      <!-- Service Card -->
+      <div class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-5xl mb-4">💼</div>
+        <h3 class="text-xl font-semibold mb-3">Interview Scheduling</h3>
+        <p class="text-gray-600">
+          Coordinating interviews between hiring managers and candidates seamlessly.
+        </p>
+      </div>
+
+      <!-- Service Card -->
+      <div class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-5xl mb-4">📊</div>
+        <h3 class="text-xl font-semibold mb-3">HR Consulting</h3>
+        <p class="text-gray-600">
+          Providing HR strategy and workforce planning to optimize recruitment processes.
+        </p>
+      </div>
+
+      <!-- Service Card -->
+      <div class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-5xl mb-4">🌍</div>
+        <h3 class="text-xl font-semibold mb-3">Campus Hiring</h3>
+        <p class="text-gray-600">
+          Organizing campus drives to onboard fresh graduates with potential and talent.
+        </p>
+      </div>
+
+      <!-- Service Card -->
+      <div class="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+        <div class="text-blue-600 text-5xl mb-4">🤝</div>
+        <h3 class="text-xl font-semibold mb-3">Onboarding Support</h3>
+        <p class="text-gray-600">
+          Helping companies with smooth onboarding processes for new employees.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-blue-600 text-white text-center">
+    <h2 class="text-3xl font-bold mb-4">Looking to Hire Top Talent?</h2>
+    <p class="mb-6">Get in touch with me to streamline your recruitment process and hire the best candidates.</p>
+    <a href="index.html#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg shadow font-semibold hover:bg-gray-100">
+      Contact Me
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 Suman | HR Recruiter Portfolio</p>
+  </footer>
+
+  <!-- Script for mobile menu -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const closeBtn = document.getElementById('close-btn');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.remove('translate-x-full');
+      menu.classList.add('translate-x-0');
+      overlay.classList.remove('hidden');
+    });
+
+    function closeMenu() {
+      menu.classList.remove('translate-x-0');
+      menu.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+    }
+
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+  </script>
+
+</body>
+</html>

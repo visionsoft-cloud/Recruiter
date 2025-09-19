@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Recruiter Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <a href="#" class="text-2xl font-bold text-blue-600">Recruiter</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="service.html" class="hover:text-blue-600">Services</a>
+        <a href="job.html" class="hover:text-blue-600">Latest Job</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <!-- Hamburger -->
+      <button class="md:hidden text-gray-600 focus:outline-none" id="menu-btn">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+  <!-- Mobile Navbar (Slide from Right) -->
+  <div id="menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <div class="p-6">
+      <button id="close-btn" class="text-gray-600 text-2xl float-right">&times;</button>
+      <nav class="mt-12 space-y-4">
+                <a href="#" class="block text-lg hover:text-blue-600">Home</a>
+        <a href="about.html" class="block text-lg hover:text-blue-600">About</a>
+        <a href="service.html" class="block text-lg hover:text-blue-600">Services</a>
+        <a href="jobs.html" class="block text-lg hover:text-blue-600">Latest Job</a>
+
+        <a href="#contact" class="block text-lg hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="pt-24 bg-gradient-to-r from-blue-50 to-blue-100">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="flex-1 mt-8 md:mt-0 flex justify-center">
+        <img src="images/suman.jpg" alt="Recruiter" class="w-80 rounded-2xl shadow-lg">
+      </div>
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Hi, I'm <span class="text-blue-600">Suman</span></h1>
+        <p class="text-lg text-gray-600 mb-6">Professional HR Recruiter with 5+ years of experience connecting top talent with leading organizations.</p>
+        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Contact Me</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        I specialize in identifying, recruiting, and placing qualified candidates across various industries. 
+        My passion is building meaningful professional relationships and helping organizations grow with the right people.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4">Talent Acquisition</h3>
+          <p class="text-gray-600">End-to-end recruitment solutions tailored to business needs.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4">Interview Preparation</h3>
+          <p class="text-gray-600">Helping candidates prepare and succeed in interviews.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4">HR Consulting</h3>
+          <p class="text-gray-600">Strategic HR solutions for startups and enterprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+      <p class="text-gray-600 mb-8">Let's connect and build the future together!</p>
+      <form class="grid gap-6 max-w-xl mx-auto">
+        <input type="text" placeholder="Your Name" class="p-3 border rounded-lg w-full">
+        <input type="email" placeholder="Your Email" class="p-3 border rounded-lg w-full">
+        <textarea placeholder="Your Message" rows="4" class="p-3 border rounded-lg w-full"></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 Suman | HR Recruiter Portfolio</p>
+  </footer>
+
+  <!-- Script for mobile menu -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const closeBtn = document.getElementById('close-btn');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.remove('translate-x-full');
+      menu.classList.add('translate-x-0');
+    });
+
+    function closeMenu() {
+      menu.classList.remove('translate-x-0');
+      menu.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+    }
+
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+  </script>
+
+</body>
+</html>
